@@ -1,15 +1,13 @@
-package com.oreilly.entities;
+package com.oreilly.restclient.entities;
 
 public class Site {
     private Integer id;
-    private String name;
+    private String address;
     private double latitude;
     private double longitude;
 
-    public Site() {}
-
-    public Site(String name, double latitude, double longitude) {
-        this.name = name;
+    public Site(String address, double latitude, double longitude) {
+        this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;
     }
@@ -18,34 +16,23 @@ public class Site {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public String getAddress() {
+        return address;
     }
 
     public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
-    }
-
     public double getLongitude() {
         return longitude;
-    }
-
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
     }
 
     @Override
     public String toString() {
         return "Site{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", address='" + address + '\'' +
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
                 '}';

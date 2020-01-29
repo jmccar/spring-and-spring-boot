@@ -1,8 +1,5 @@
-package com.oreilly.json;
+package com.oreilly.restclient.json;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Location {
     private double lat;
     private double lng;
@@ -23,7 +20,8 @@ public class Location {
         this.lng = lng;
     }
 
+    @Override
     public String toString() {
-        return String.format("(%s,%s)", lat, lng);
+        return "(" + lat + "," + lng + ")";
     }
 }

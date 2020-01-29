@@ -1,8 +1,5 @@
-package com.oreilly.json;
+package com.oreilly.restclient.json;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Result {
     private String formattedAddress;
     private Geometry geometry;
@@ -21,5 +18,13 @@ public class Result {
 
     public void setGeometry(Geometry geometry) {
         this.geometry = geometry;
+    }
+
+    @Override
+    public String toString() {
+        return "Result{" +
+                "formattedAddress='" + formattedAddress + '\'' +
+                ", geometry=" + geometry +
+                '}';
     }
 }
